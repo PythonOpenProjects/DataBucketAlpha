@@ -905,7 +905,7 @@ def fromfile(fn,dirname):
     except IOError:
         sys.exit(-1)
 
-    data = pd.read_csv(dirname+'/'+fn,sep='\t',index_col=False, na_values=numpy.nan, skiprows = counterHeader-1) #, parse_dates=[3], infer_datetime_format=True, date_parser=odvdatetime)
+    data = pd.read_csv(dirname+'/'+fn,sep='\t',index_col=False, na_values=numpy.nan, skiprows = counterHeader-1) 
     data.columns = [c.replace(' ', '_') for c in data.columns]
     data['Cruise'].fillna(method='ffill', inplace = True)
     data['Station'].fillna(method='ffill', inplace = True)
