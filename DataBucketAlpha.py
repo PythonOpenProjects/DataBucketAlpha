@@ -894,7 +894,6 @@ def gob():
         st.write('Please LOAD DATA') 
         
 def fromfile(fn,dirname):
-    """load 1 ODV file entirely into Odv object: dataframe + metadata fields for columns"""
     counterHeader = 1
     try:
         f = open(dirname+'/'+fn,'r')
