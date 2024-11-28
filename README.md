@@ -5,7 +5,7 @@ DataBucketAlpha is a EDA (Exploratory data analysis) software streamlit based.
 * (https://www.youtube.com/watch?v=aG9jhyc2O3Q " A little video about the use of the software")
 [![Watch the video](https://img.youtube.com/vi/aG9jhyc2O3Q/maxresdefault.jpg)](https://youtu.be/aG9jhyc2O3Q)
 
-## Credits for the used packages and tutorials:
+## Credits for used packages and tutorials:
 * PivoTableJS: https://pivottable.js.org
 * DTale: https://github.com/man-group/dtale
 * Ydata Profiling: https://docs.profiling.ydata.ai/
