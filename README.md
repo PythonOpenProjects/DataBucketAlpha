@@ -1,5 +1,6 @@
 # DataBucketAlpha
 DataBucketAlpha is a basic EDA (Exploratory data analysis) software streamlit based.
+
 The application has been made including ready-to-use software found on GitHub and on PIP (see CREDITS).
 
 ## Video example
