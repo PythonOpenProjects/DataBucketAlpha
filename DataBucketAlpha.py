@@ -231,7 +231,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 st.sidebar.title("Navigation Options 🧭")
 # Display different functionalities
-choice = st.sidebar.selectbox('Select....', options=["Home", "Load a Dataset", "Merge Datasets", "Load ODVs to MERGE in a Dataset", "Data Editor", "Dataframe Explorer", "Dataframe Analysis", "PLOT Service", "Map Service", "Model Prediction", "Aggrid Builder", "Pgwalker", "ydata_profiling", "pivottablejs", "Dtale", "MitoSheet", "Jupyterlite", "Fake Data Service", "Reset all"], index=0)
+choice = st.sidebar.selectbox('Select....', options=["Home", "Load a Dataset", "Merge Datasets", "Load ODVs to MERGE in a Dataset", "Data Editor", "Dataframe Explorer", "Dataframe Analysis", "PLOT Service", "Map Service", "Model Prediction", "Aggrid Builder", "Pygwalker", "ydata_profiling", "pivottablejs", "Dtale", "MitoSheet", "Jupyterlite", "Fake Data Service", "Reset all"], index=0)
 
 
 def mapservice():
@@ -862,7 +862,7 @@ def dataframe_analysis():
 
 def loadPgwalker():
     #st.write('Pgwalker')
-    st.title(':blue[Pgwalker]')
+    st.title(':blue[Pygwalker]')
     st.link_button("How to use", "https://www.youtube.com/watch?v=u0A-bcQHfmA")
     if 'df' in st.session_state:
         df= st.session_state['df']
