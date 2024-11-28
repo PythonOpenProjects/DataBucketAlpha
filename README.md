@@ -15,4 +15,4 @@ DataBucketAlpha is a EDA (Exploratory data analysis) software streamlit based.
 * Aggrid Builder: https://pypi.org/project/streamlit-aggrid/
 * Faker: https://github.com/joke2k/faker
 * Mplcyberpunk style plot: https://github.com/dhaitz/mplcyberpunk
-* Interactive Predictive Machine Learning area: https://arshren.medium.com/building-interactive-predictive-machine-learning-workflow-with-streamlit-330188c7ead0
+* Interactive Predictive Machine Learning area: https://github.com/arshren/ML_UI/blob/main/ml_buddy.py
