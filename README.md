@@ -20,4 +20,5 @@ For any suggestion you can contact me at pythonopenprojects@gmail.com
 * Faker: https://github.com/joke2k/faker
 * Mplcyberpunk style plot: https://github.com/dhaitz/mplcyberpunk
 * Interactive Predictive Machine Learning area: https://github.com/arshren/ML_UI/blob/main/ml_buddy.py
+* ODV merger: Copyright (C) 2014 Deltares for EMODnet Chemistry, Gerben J. de Boer / Giorgio Santinelli (gerben.deboer@deltares.nl / Giorgio.Santinelli@deltares.nl), published under "GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version."
 
