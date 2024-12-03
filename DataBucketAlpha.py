@@ -340,6 +340,9 @@ def load_data_2_dataframe(file,separaval):
     if 'df' not in st.session_state:
         if file.name.split(".")[-1] == "csv": 
             df = pd.read_csv(file,sep=separaval)
+            for tmpcol in df.columns:
+                cleanCol=function_cleaner(tmpcol)
+                df.rename(columns={tmpcol: cleanCol}, inplace=True)
 
         elif file.name.split(".")[-1] == 'json':
             df = pd.read_json(file, lines=True)
@@ -691,20 +694,48 @@ def loadydata_profiling():
     else:
         st.write('Please LOAD DATA')
 
+
+
+def function_cleaner(x):
+   x = x.replace(' ', '_')
+   x = x.replace(':', '_')
+   x = x.replace('[', '_')
+   x = x.replace(']', '_')
+   x = x.replace('.', '_')
+   x = x.replace('/', '_')
+   print('change '+str(x))
+   return x
+
+
+
 def loadDataEditor():
     if 'df' in st.session_state:
-        execute=0
         df= st.session_state['df']
+        
         #st.write('Data Editor')
         st.title(':blue[Data Editor] 📝')
-        selected_column = st.selectbox('Select column to delete:', df.columns)
-        st.write('')
-        if st.button("Delete Column"):
-            execute=1
-        
-        if execute==1:
-            df.drop(columns=[selected_column], axis=1, inplace=True)
-            execute=0
+        cols = st.columns(2)
+        with cols[0]:
+            selected_column = st.selectbox('Select column name to delete:', df.columns,index=None, placeholder="Select ...",)
+            #st.write('')
+            if st.button("Delete Column"):
+                if selected_column is not None:
+                    df.drop(columns=[selected_column], axis=1, inplace=True)
+                
+        with cols[1]:
+            #st.write('Insert column name')
+            
+            title = st.text_input(
+                "Insert column name to create a new one 👇",
+                "",
+                key="placeholder",
+            )
+            if st.button("Create Column"):
+                if title != '':
+                    df[title] = ''
+                
+
+            
         st.data_editor(df, num_rows="dynamic")
         #clean_data() 
     else:
